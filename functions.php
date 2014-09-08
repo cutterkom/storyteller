@@ -1,7 +1,7 @@
 <?php 
 
 /*****************
-	
+	Storyteller Theme Functions
 *****************/
 
 
@@ -184,16 +184,13 @@
 	function example_dashboard_widget_function() {
 
 	// Display whatever it is you want to show.
-		echo "<p>With storyteller you can combine big images and videos with texts and embeddable content to create visually attractive stories.</p>";
-		echo "<a href='http://storyteller.katharinabrunner.de/wp-admin/post-new.php'><button class='dashboard-btn'>Create a story</button></a>";
-		echo '<a href="http://storyteller.katharinabrunner.de/demo">See the demo</a> ';
-		echo "<h2>A brief introduction</h2>";
-		echo "<h3>What are Slides?</h3>";
-		echo 'Every story is built up of individual slides. Click "Add Slide" to create a slide. Enter a title, your text, add a featured image and you are good to go. By combining individual slides you can creare a story.';
-		echo '<h3>How to add a full screen background image?</h3>'; 
-		echo "Add an image as featured image. It is automatically set as a full screen background image.";
-		echo '<h3>How to add a full screen video?</h3>'; 
-		echo "Just copy a url from youtube or vimeo. The video will be automatically inserted full screen.";
+		echo "<p>With Storyteller you can combine big images and videos with text and embeddable content to create visually attractive stories.</p>";
+		echo "<a href='<?php site_url('/wp-admin/post-new.php', 'https'); ?>'><button class='dashboard-btn'>Create a story</button></a>";
+		echo '<a href="http://storyteller.katharinabrunner.de/demo" style="margin-left:30px;">See the demo</a> ';
+		echo "<h2>How to start?</h2>";
+	
+		echo 'Every story is built up of individual slides. Click "Add Slide" to create a slide. Enter a title, your text, add a featured image and you are good to go. By combining individual slides you can create a story.';
+		echo '<h3>You can find more help at the right upper corner on every <a href="">Add Slide</a> page</h3> ';
 	}      
 
 /*****************
