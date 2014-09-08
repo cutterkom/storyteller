@@ -7,7 +7,7 @@ The main goal of Storyteller is to make publishing a multimedia story as easy as
 
 ## How does a story look like?
 Look at the [demo](http://storyteller.katharinabrunner.de/demo) to get an idea of the look and feel of Storyteller. Basically, there are slides that are combined to a story.
-![demo of Storyteller](http://storyteller.katharinabrunner.de/demo)
+![demo of Storyteller](http://storyteller.katharinabrunner.de/static/demo.jpg)
 
 ## Features
 * Create Slides as individual posts
