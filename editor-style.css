@@ -1,0 +1,9 @@
+/*
+Theme Name: Strytllr
+Description: Used to style the TinyMCE editor.
+*/
+
+
+.text-middle {margin-right: auto;margin-left: auto;display: block; width:50%;}
+.text-right {float: right;width:50%;}
+.text-left {float-left;width: 50%}
