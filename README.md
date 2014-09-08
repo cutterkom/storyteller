@@ -3,7 +3,7 @@ Storyteller
 
 A WordPress theme for multimedia storytelling. It is an open source tool to build stories that rely heavily on images or videos. You can combine big images and videos with texts and embeddable content to create visually attractive stories. 
 
-The main goal of Storyteller is to make publishing a multimedia story as easy as possible. Help sections and documentation are included in the theme.
+The main goal of Storyteller is to make publishing a multimedia story as easy as possible. That is why additional help sections and documentation are included in the theme.
 
 ## How does a story look like?
 Look at the [demo](http://storyteller.katharinabrunner.de/demo) to get an idea of the look and feel of Storyteller. Basically, there are slides that are combined to a story.
