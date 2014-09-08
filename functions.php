@@ -274,7 +274,7 @@ add_action('admin_menu','storyteller_remove_post_metaboxes');
 
 
 	function storyteller_register_options_page(){
-		add_menu_page( 'Options', 'options menu', 'manage_options', 'storytelleroptions', 'storyteller_options_page', plugins_url( 'myplugin/images/icon.png' ), 6 ); 
+		add_menu_page( 'Options', 'Options', 'manage_options', 'storytelleroptions', 'storyteller_options_page', plugins_url( 'myplugin/images/icon.png' ), 6 ); 
 	}
 	add_action( 'admin_menu', 'storyteller_register_options_page' );
 
@@ -301,13 +301,13 @@ add_action('admin_menu','storyteller_remove_post_metaboxes');
 		register_setting( 'storyteller-options', 'storyteller-options' );
 
     // Settings fields and sections
-		add_settings_section( 'section_typography', 'Typography Options', 'storyteller_section_typography', 'storyteller-options' );
-		add_settings_field( 'primary-font', 'Primary Font', 'storyteller_field_primary_font', 'storyteller-options', 'section_typography' );
+		add_settings_section( 'section_typography', 'Choose your font', 'storyteller_section_typography', 'storyteller-options' );
+		add_settings_field( 'primary-font', 'Font', 'storyteller_field_primary_font', 'storyteller-options', 'section_typography' );
 	}
 	add_action( 'admin_init', 'storyteller_register_admin_settings' );
 
 	function storyteller_section_typography() {
-		echo 'Section description can go here.';
+		echo '';
 	}
 
 	function storyteller_field_primary_font() {

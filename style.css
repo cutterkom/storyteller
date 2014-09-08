@@ -1,9 +1,14 @@
 /*
 Theme Name: Storyteller
 Theme URI: http://storyteller.katharinabrunner.de
-Description: Storyteller is a WordPress theme to build multimedia stories. 
+Description: Storyteller is a WordPress theme for multimedia storytelling. 
 Author URI: http://www.katharinabrunner.de
 Version: 1.0
+License: GNU General Public License v2.0
+License URL: http://www.gnu.org/licenses/gpl-2.0.html
+
+Storyteller WordPress Theme, Copyright 2014 WordPress.org
+Storyteller is distributed under the terms of the GNU GPL
 
 */
 
@@ -252,12 +257,13 @@ table {
 th {
 	font-weight: bold;
 }
-body {background: #000;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 30px;}
+body {background: #000;color:#fff;line-height: 1.7em;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 30px;text-shadow: rgb(0, 0, 0) 1px 1px 1px;}
 
 h1,h2,h3,h4 {
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
 	color: #fff;
+	line-height: 1.3em;
 	display: block;
 	font-family: helvetica, arial, sans-serif;
 	font-weight: bold;
@@ -270,9 +276,11 @@ h1 {font-size: 70px;}
 h2 {font-size:50;}
 h3 {font-size:40;}
 
-p {}
-.entry-content {line-height: 1.7em;color:#fff;text-shadow: rgb(0, 0, 0) 1px 1px 1px;margin: 0 50px 20px 50px;}
-.text { width:660px;}
+a {color: white;}
+a:visited {color: white;}
+a:focus {color: white;}
+.entry-content {margin: 0 50px 20px 50px;}
+.text-middle, .text-right, .text-left {width:550px;}
 .text-middle {margin-right: auto;margin-left: auto;display: block;}
 .text-right {float: right;}
 .text-left {float-left;}
@@ -284,19 +292,14 @@ p {}
 .prev {float: left;}
 .next a {text-decoration: none;}
 .prev a {text-decoration: none;}
-.button {
-	color: #ffffff;
-	background-color: #e74c3c;
-	padding: 10px 19px;
-	font-size: 17px;
-	line-height: 1.471;
-	border-radius: 6px;border: none;}
 
-	@media (max-width: 768px) {
+
+@media (max-width: 900px) {
 		
-		h1 {font-size: 30px; width:90%;margin: 30px 10px 30px 10px;}
+	h1 {font-size: 30px; width:90%;margin: 30px 10px 30px 10px;}
 
-		.text, p {font-size: 20px;margin: 0 10px 30px 10px;width:90%;}
-		.arrow-nav {margin-right: auto;margin-left: auto;display: block;}
+	.entry-content {font-size: 20px;margin: 0 50px 30px 50px;width:90%;}
+	.text {width:98%;}
+	.arrow-nav {margin-right: auto;margin-left: auto;display: block;}
 
-	}
+}
