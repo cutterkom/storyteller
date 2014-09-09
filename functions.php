@@ -37,6 +37,7 @@
 				);
 
 			wp_localize_script( 'backstretch-set', 'BackStretchImages', $backstretch_img );
+			
 		}
 
 
@@ -171,7 +172,7 @@
 
 		wp_add_dashboard_widget(
                  'example_dashboard_widget',         // Widget slug.
-                 'How Stryteller works',         // Title.
+                 'Introduction to Storyteller',         // Title.
                  'example_dashboard_widget_function' // Display function.
                  );	
 	}
@@ -246,7 +247,7 @@ add_action('admin_menu','storyteller_remove_post_metaboxes');
 	<p>Just copy a url from youtube or vimeo in the text editor. The video will be automatically inserted full screen.</p>
 	<h4>How to assign a slide to a story?</h4>
 	<p>Choose an existing story under "Stories" or create a new one.</p>
-	<h3><a href="">Need more help? </a></h3>
+	<h3><a href="http://storyteller.katharinabrunner.de">Need more help? </a></h3>
 	<?php }
 	add_action( 'add_meta_boxes', 'storyteller_metabox_top_right' );
 
@@ -371,5 +372,8 @@ function storyteller_wp_head_fonts() {
 	}
 }
 add_action( 'wp_head', 'storyteller_wp_head_fonts' );
+
+
+
 
 ?>

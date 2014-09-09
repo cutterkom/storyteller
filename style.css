@@ -280,10 +280,21 @@ a {color: white;}
 a:visited {color: white;}
 a:focus {color: white;}
 .entry-content {margin: 0 50px 20px 50px;}
-.text-middle, .text-right, .text-left {width:550px;}
-.text-middle {margin-right: auto;margin-left: auto;display: block;}
-.text-right {float: right;}
-.text-left {float-left;}
+
+/* Text positioning */
+.top-centered, .top-right, .top-left, .bottom-left, .centered, .bottom-right, .centered-right, .centered-left   {width:550px;}
+
+.top-centered {margin-right: auto;margin-left: auto;display: block;}
+.top-right {float: right;}
+.top-left {float:left;}
+
+.bottom-left {bottom:0;left:50px;position: fixed;}
+.bottom-right {bottom:0;right:50px;position: fixed;}
+.centered {width: 50%;height: 50%;margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0;}
+.centered-left {height: 50%;margin: auto; position: absolute; top: 0; left: 0;bottom: 0;}
+.centered-right {height: 50%;margin: auto; position: absolute; top: 0; right: 0;bottom: 0;}
+
+
 
 .arrow-nav {overflow: hidden; width:200px; right: 10px; position:fixed; bottom:20px;}
 .next-prev-button {opacity:0.8; width: 50px;height: 50px;background-color: #eee; margin: 0 10px 0 0;font-weight: bold;text-align: center;line-height: 47px;color:#333;}
