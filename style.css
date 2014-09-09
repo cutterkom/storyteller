@@ -291,15 +291,15 @@ a:focus {color: white;}
 .bottom-left {bottom:0;left:50px;position: fixed;}
 .bottom-right {bottom:0;right:50px;position: fixed;}
 .centered {width: 50%;height: 50%;margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0;}
-.centered-left {height: 50%;margin: auto; position: absolute; top: 0; left: 0;bottom: 0;}
-.centered-right {height: 50%;margin: auto; position: absolute; top: 0; right: 0;bottom: 0;}
+.centered-left {height: 50%;margin: auto; position: absolute; top: 0; left: 50px;bottom: 0;}
+.centered-right {height: 50%;margin: auto; position: absolute; top: 0; right: 50px;bottom: 0;}
 
 
 
-.arrow-nav {overflow: hidden; width:200px; right: 10px; position:fixed; bottom:20px;}
+.arrow-nav {overflow: hidden; width:120px; right: 10px; position:fixed; bottom:20px;}
 .next-prev-button {opacity:0.8; width: 50px;height: 50px;background-color: #eee; margin: 0 10px 0 0;font-weight: bold;text-align: center;line-height: 47px;color:#333;}
 .next-prev-button:hover {background-color: white;color: #000;}
-.next {float: left;}
+.next {float: right;}
 .prev {float: left;}
 .next a {text-decoration: none;}
 .prev a {text-decoration: none;}
