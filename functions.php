@@ -185,12 +185,12 @@
 
 	// Display whatever it is you want to show.
 		echo "<p>With Storyteller you can combine big images and videos with text and embeddable content to create visually attractive stories.</p>";
-		echo "<a href='<?php site_url('/wp-admin/post-new.php', 'https'); ?>'><button class='dashboard-btn'>Create a story</button></a>";
+		echo "<a href='/wp-admin/post-new.php'><button class='dashboard-btn'>Create a story</button></a>";
 		echo '<a href="http://storyteller.katharinabrunner.de/demo" style="margin-left:30px;">See the demo</a> ';
 		echo "<h2>How to start?</h2>";
 	
 		echo 'Every story is built up of individual slides. Click "Add Slide" to create a slide. Enter a title, your text, add a featured image and you are good to go. By combining individual slides you can create a story.';
-		echo '<h3>You can find more help at the right upper corner on every <a href="">Add Slide</a> page</h3> ';
+		echo '<h3>You can find more help at the right upper corner on every <a href="/wp-admin/post-new.php">Add Slide</a> page</h3> ';
 	}      
 
 /*****************
@@ -271,7 +271,7 @@ add_action('admin_menu','storyteller_remove_post_metaboxes');
 
 
 	function storyteller_register_options_page(){
-		add_menu_page( 'Options', 'Options', 'manage_options', 'storytelleroptions', 'storyteller_options_page', plugins_url( 'myplugin/images/icon.png' ), 6 ); 
+		add_menu_page( 'Options', 'Options', 'manage_options', 'storytelleroptions', 'storyteller_options_page', '', 6 ); 
 	}
 	add_action( 'admin_menu', 'storyteller_register_options_page' );
 
@@ -371,6 +371,5 @@ function storyteller_wp_head_fonts() {
 	}
 }
 add_action( 'wp_head', 'storyteller_wp_head_fonts' );
-
 
 ?>
