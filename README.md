@@ -22,6 +22,7 @@ Storyteller is built on WordPress. It is integrated as a theme, but it does far 
 
 * Write a FAQ
 * Sharing options
+* Option to scroll rather than click
 
 ## Changelog
 ### Version 1.0
