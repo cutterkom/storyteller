@@ -130,7 +130,7 @@
 	function storyteller_change_tax_object_label() {
 		global $wp_taxonomies;
 		$labels = &$wp_taxonomies['category']->labels;
-		$labels->name = __('Stories', 'storyteller');
+		$labels->name = __('Story', 'storyteller');
 		$labels->singular_name = __('Story', 'storyteller');
 		$labels->search_items = __('Search Your Stories', 'storyteller');
 		$labels->all_items = __('All Your Stories', 'storyteller');
@@ -184,7 +184,6 @@
 	*****************/
 	function example_dashboard_widget_function() {
 
-	// Display whatever it is you want to show.
 		echo "<p>With Storyteller you can combine big images and videos with text and embeddable content to create visually attractive stories.</p>";
 		echo "<a href='/wp-admin/post-new.php'><button class='dashboard-btn'>Create a story</button></a>";
 		echo '<a href="http://storyteller.katharinabrunner.de/demo" style="margin-left:30px;">See the demo</a> ';
@@ -240,7 +239,7 @@ add_action('admin_menu','storyteller_remove_post_metaboxes');
 	*****************/
 	function storyteller_top_right_help_metabox_content() { ?>
 	<h4>Where to put title and text?</h4>
-	<p>Enter your title in the title text field and your text in the text editor below. It is important that you <strong>choose the position by selecting paragraphs and asigning them to "right", "middle" or "left" via Quicktags</strong>.</p>
+	<p>Enter your title in the title text field and your text in the text editor below. It is important that you <strong>choose the position by selecting paragraphs and asigning them to a position via Quicktags</strong>.</p>
 	<h4>How to add a full screen background image?</h4>
 	<p>Add an image as featured image. It is automatically set as a full screen background image.</p>
 	<h4>Want to use a video?</h4>
@@ -374,6 +373,78 @@ function storyteller_wp_head_fonts() {
 add_action( 'wp_head', 'storyteller_wp_head_fonts' );
 
 
+/*****************
+	Remove from All Slides
+	*****************/
+
+function remove_post_columns($defaults) {
+  unset($defaults['comments']);
+  unset($defaults['author']);
+  unset($defaults['tags']);
+  return $defaults;
+}
+add_filter('manage_posts_columns', 'remove_post_columns');
 
 
+/*****************
+	Add Thumbnail to All Slides
+	*****************/
+
+if (function_exists( 'add_theme_support' )){
+    add_filter('manage_posts_columns', 'posts_columns', 5);
+    add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+    add_filter('manage_pages_columns', 'posts_columns', 5);
+    add_action('manage_pages_custom_column', 'posts_custom_columns', 5, 2);
+}
+function posts_columns($defaults){
+    $defaults['wps_post_thumbs'] = __('Featured Image');
+    return $defaults;
+}
+function posts_custom_columns($column_name, $id){
+        if($column_name === 'wps_post_thumbs'){
+        echo the_post_thumbnail( array(125,80) );
+    }
+}
+
+
+/*****************
+	Change Order in All Slides: Stories and Thumbnails before title
+	*****************/
+
+add_filter('manage_posts_columns', 'column_order');
+function column_order($columns) {
+  $n_columns = array();
+  $before = 'title'; // move before this
+  foreach($columns as $key => $value) {
+    if ($key==$before){
+      $n_columns['categories'] = '';
+      $n_columns['wps_post_thumbs'] = '';
+    }
+      $n_columns[$key] = $value;
+  }
+  return $n_columns;
+}
+
+/*****************
+	Add Dashboard Widget for stories	
+	*****************/
+	function stories_add_dashboard_widgets() {
+
+		wp_add_dashboard_widget(
+                 'stories_dashboard_widget',         // Widget slug.
+                 'Your stories',         // Title.
+                 'stories_dashboard_widget_function' // Display function.
+                 );	
+	}
+	add_action( 'wp_dashboard_setup', 'stories_add_dashboard_widgets' );
+
+
+/*****************
+	List stories in widget	
+	*****************/
+	function stories_dashboard_widget_function() {
+
+	// Display whatever it is you want to show.
+		echo wp_list_categories('style=none&title_li=');
+	}   
 ?>
