@@ -18,6 +18,12 @@ Look at the [demo](http://storyteller.katharinabrunner.de/demo) to get an idea o
 ## Technical Stuff
 Storyteller is built on WordPress. It is integrated as a theme, but it does far more than just changing a website's design. It simplifies the WordPress backend, too, in order to offer a simple and hopefully mostly self-explaining interface. It uses [FitVids.js](https://github.com/davatron5000/FitVids.js) and [Backstretch.js](https://github.com/srobbin/jquery-backstretch) for full screen images and videos. [_s](https://github.com/Automattic/_s) is used as a starting point.
 
+## Installation
+
+* A fresh installation of WordPress
+* Install the Storyteller theme + the [AddQuicktag-Plugin](http://wordpress.org/plugins/addquicktag), where you should import this [json-file](http://storyteller.katharinabrunner.de/static/addquicktag-storyteller.json) at the bottom of AddQuicktag's settings page.</li>
+
+
 ## To do
 
 * Write a FAQ
