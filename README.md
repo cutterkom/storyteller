@@ -11,7 +11,7 @@ Look at the [demo](http://storyteller.katharinabrunner.de/demo) to get an idea o
 
 ## Features
 * Create Slides as individual posts
-* Combined them via categories called stories
+* Combine them via categories called stories
 * Deletes not needed menu pages in WordPress backend
 * Options page to set fonts
 
