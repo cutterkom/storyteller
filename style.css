@@ -279,15 +279,14 @@ h3 {font-size:40;}
 a {color: white;}
 a:visited {color: white;}
 a:focus {color: white;}
-.entry-content {margin: 0 50px 20px 50px;}
+.entry-content {}
 
 /* Text positioning */
-.top-centered, .top-right, .top-left, .bottom-left, .centered, .bottom-right, .centered-right, .centered-left   {width:550px;}
+.top-centered, .top-right, .top-left, .bottom-left, .centered, .bottom-right, .centered-right, .centered-left {width:550px;margin: 0 50px 20px 50px;}
 
 .top-centered {margin-right: auto;margin-left: auto;display: block;}
 .top-right {float: right;}
 .top-left {float:left;}
-
 .bottom-left {bottom:0;left:50px;position: fixed;}
 .bottom-right {bottom:0;right:50px;position: fixed;}
 .centered {width: 50%;height: 50%;margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0;}
@@ -311,8 +310,8 @@ a:focus {color: white;}
 		
 	h1 {font-size: 30px; width:90%;margin: 30px 10px 30px 10px;}
 
-	.entry-content {font-size: 20px;margin: 0 30px 30px 30px;}
-	.text {width:98%;}
-	.arrow-nav {margin-right: auto;margin-left: auto;display: block;}
+	.entry-content {font-size: 20px; margin: 0;width:98%;}
+	.top-centered, .top-right, .top-left, .bottom-left, .centered, .bottom-right, .centered-right, .centered-left {width: 98%; float:left;position: relative;left:10px;}
+	.arrow-nav {margin-right: auto;margin-left: auto;display: block;right: 40%;}
 
 }
